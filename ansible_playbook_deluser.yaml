@@ -1,0 +1,10 @@
+- name: Rimuovi utente pippo
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Cancella utente pippo
+      ansible.builtin.user:
+        name: pippo
+        state: absent
+        remove: true

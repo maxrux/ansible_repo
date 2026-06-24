@@ -1,0 +1,11 @@
+- name: Aggiungi utente max ai sudoers
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Aggiungi max ai sudoers senza password
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers
+        line: "max ALL=(ALL) NOPASSWD: ALL"
+        validate: "visudo -cf %s"
+        state: present
