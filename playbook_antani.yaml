@@ -8,7 +8,7 @@
         path: /home/max/antani.txt
       register: file_antani
 
-    - name: Crea utente ciccioo
+    - name: Crea utente ciccio
       ansible.builtin.user:
         name: ciccio
         password: "{{ 'ciccio01' | password_hash('sha512') }}"
