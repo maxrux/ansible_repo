@@ -8,10 +8,10 @@
         path: /home/max/antani.txt
       register: file_antani
 
-    - name: Crea utente pluto
+    - name: Crea utente ciccioo
       ansible.builtin.user:
-        name: pluto
-        password: "{{ 'pluto01' | password_hash('sha512') }}"
+        name: ciccio
+        password: "{{ 'ciccio01' | password_hash('sha512') }}"
         state: present
         shell: /bin/bash
         create_home: true
